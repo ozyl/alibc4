@@ -1,4 +1,27 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.maomengte.alibc4">
+    <application>
+        <activity
+            android:name="com.alibaba.alibclinkpartner.smartlink.ALPEntranceActivity"
+            android:exported="false">
+        </activity>
+
+        <receiver
+            android:name="com.alibaba.baichuan.trade.biz.login.LoginBroadcastReceiver"
+            android:exported="false">
+        </receiver>
+        <receiver
+            android:name="com.alibaba.alibclogin.listener.LoginBroadcastReceiver"
+            android:exported="false">
+        </receiver>
+        <activity
+            android:name="com.taobao.avplayer.playercontrol.hiv.DialogActivity"
+            android:exported="false">
+        </activity>
+        <service
+            android:name="com.alibaba.triver.TRACCSService"
+            android:exported="false">
+        </service>
+    </application>
 </manifest>

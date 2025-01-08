@@ -35,6 +35,10 @@ abstract class Alibc4Platform extends PlatformInterface {
     throw UnimplementedError('login() has not been implemented.');
   }
 
+  Future<bool> hasLogin() {
+    throw UnimplementedError('hasLogin() has not been implemented.');
+  }
+
   Future<Map?> logout() {
     throw UnimplementedError('logout() has not been implemented.');
   }
@@ -72,6 +76,10 @@ abstract class Alibc4Platform extends PlatformInterface {
   }
 
   Future<Map?> oauth(url) {
+    throw UnimplementedError('oauth() has not been implemented.');
+  }
+
+  Future<Map?> showAuthDialog(String appkey,{String? appLogo,String? appName}) {
     throw UnimplementedError('oauth() has not been implemented.');
   }
 }

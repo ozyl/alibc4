@@ -26,6 +26,11 @@ class MethodChannelAlibc4 extends Alibc4Platform {
     final map = await methodChannel.invokeMethod<Map>('login');
     return map;
   }
+  @override
+  Future<bool> hasLogin() async {
+    final map = await methodChannel.invokeMethod<bool>('hasLogin');
+    return map??false;
+  }
 
   @override
   Future<Map?> logout() async {
@@ -86,4 +91,15 @@ class MethodChannelAlibc4 extends Alibc4Platform {
     final map = await methodChannel.invokeMethod<Map>('oauth',url);
     return map;
   }
+
+  @override
+  Future<Map?> showAuthDialog(String appkey,{String? appLogo,String? appName})async {
+    final map = await methodChannel.invokeMethod<Map>('showAuthDialog',{
+      "key":appkey,
+      "logo":appLogo,
+      "name":appName,
+    });
+    return map;
+  }
+  
 }
